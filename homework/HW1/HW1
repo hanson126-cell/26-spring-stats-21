@@ -6,7 +6,7 @@
    "source": [
     "# Stats 21: Homework 1\n",
     "\n",
-    "## Your Name\n",
+    "## Haoshen Wu\n",
     "\n",
     "Acknowledgements: several of these problems are copied from or modified from Think Python by Allen Downey.\n",
     "\n",
@@ -27,7 +27,9 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "jp-MarkdownHeadingCollapsed": true
+   },
    "source": [
     "# Task 1"
    ]
@@ -129,6 +131,7 @@
    "cell_type": "code",
    "execution_count": 3,
    "metadata": {
+    "scrolled": true,
     "tags": [
      "raises-exception"
     ]
@@ -151,8 +154,18 @@
   },
   {
    "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "The second print has extra spaces (indentation) before it. Indentation cannot have random spaces"
+   ]
+  },
+  {
+   "cell_type": "code",
    "execution_count": 4,
    "metadata": {
+    "scrolled": true,
     "tags": [
      "raises-exception"
     ]
@@ -172,6 +185,15 @@
     "x = 10\n",
     "if x > 8\n",
     "    print(\"x is greater than 8\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Missing colon (:) after the if statement"
    ]
   },
   {
@@ -200,6 +222,15 @@
   },
   {
    "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Using = instead of == for comparison"
+   ]
+  },
+  {
+   "cell_type": "code",
    "execution_count": 6,
    "metadata": {
     "tags": [
@@ -221,6 +252,15 @@
     "x = 5\n",
     "if x == 5:\n",
     "print(\"x is five\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Missing indentation for the print statement, should add 4 spaces before print(\"x is five\")"
    ]
   },
   {
@@ -251,6 +291,15 @@
    ]
   },
   {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sort() is not a standalone function"
+   ]
+  },
+  {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -268,10 +317,23 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 2,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2562\n"
+     ]
+    }
+   ],
+   "source": [
+    "minutes = 42\n",
+    "seconds = 42\n",
+    "total_seconds = (minutes * 60) + seconds\n",
+    "print(total_seconds)"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -282,10 +344,23 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 3,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6.211180124223602\n"
+     ]
+    }
+   ],
+   "source": [
+    "km = 10\n",
+    "km_per_mile = 1.61\n",
+    "miles = km / km_per_mile\n",
+    "print(miles)"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -297,10 +372,33 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Average 1-mile pace: 6 minutes and 52 seconds\n",
+      "Average speed: 8.73 miles per hour\n",
+      "The history saving thread hit an unexpected error (OperationalError('attempt to write a readonly database')).History will not be written to the database.\n"
+     ]
+    }
+   ],
+   "source": [
+    "race_distance_km = 10\n",
+    "race_time_min = 42\n",
+    "race_time_sec = 42\n",
+    "race_time_total_sec = (race_time_min * 60) + race_time_sec\n",
+    "race_distance_miles = race_distance_km / 1.61\n",
+    "time_per_mile_sec = race_time_total_sec / race_distance_miles\n",
+    "pace_minutes = int(time_per_mile_sec // 60)\n",
+    "pace_seconds = int(time_per_mile_sec % 60)\n",
+    "print(f\"Average 1-mile pace: {pace_minutes} minutes and {pace_seconds} seconds\")\n",
+    "race_time_hours = race_time_total_sec / 3600  # Convert seconds to hours\n",
+    "avg_speed_mph = race_distance_miles / race_time_hours\n",
+    "print(f\"Average speed: {avg_speed_mph:.2f} miles per hour\")"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -324,10 +422,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 4,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "523.5987755982989\n",
+      "14137.166941154068\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "def sphere_volume(r):\n",
+    "    return 4/3 * math.pi * r**3\n",
+    "\n",
+    "print(sphere_volume(5))\n",
+    "print(sphere_volume(15))"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -343,10 +457,25 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 5,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "945.4499999999999\n",
+      "159.45\n"
+     ]
+    }
+   ],
+   "source": [
+    "def wholesale_cost(books):\n",
+    "    return books * 24.95 * 0.6 + 3 + (books-1)*0.75\n",
+    "\n",
+    "print(wholesale_cost(60))\n",
+    "print(wholesale_cost(10))"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -363,10 +492,36 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 6,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "38:06\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "(38, 6)"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def run_time(miles, warm_pace, fast_pace):\n",
+    "    sec = 2*warm_pace + (miles-2)*fast_pace\n",
+    "    m, s = divmod(sec, 60)\n",
+    "    print(f\"{m}:{s:02d}\")\n",
+    "    return (m, s)\n",
+    "\n",
+    "run_time(5, 495, 432)"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -383,10 +538,39 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 7,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "38:06\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "(38, 6)"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def run_time_str(miles, warm_pace, fast_pace):\n",
+    "    def to_sec(t):\n",
+    "        m, s = map(int, t.split(':'))\n",
+    "        return m*60 + s\n",
+    "    sec = 2*to_sec(warm_pace) + (miles-2)*to_sec(fast_pace)\n",
+    "    m, s = divmod(sec, 60)\n",
+    "    print(f\"{m}:{s:02d}\")\n",
+    "    return (m, s)\n",
+    "\n",
+    "run_time_str(5, \"8:15\", \"7:12\")"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -411,10 +595,32 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 8,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1.4142135623730951, 0.7853981633974483)\n",
+      "(3.605551275463989, -2.158798930342464)\n",
+      "(4.47213595499958, 0.4636476090008061)\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "\n",
+    "def polar(real, imaginary):\n",
+    "    r = math.hypot(real, imaginary)          \n",
+    "    theta = math.atan2(imaginary, real)     \n",
+    "    return (r, theta)\n",
+    "\n",
+    "# Test cases\n",
+    "print(polar(1, 1))        \n",
+    "print(polar(-2, -3))      \n",
+    "print(polar(4, 2))        "
+   ]
   },
   {
    "cell_type": "markdown",
@@ -434,31 +640,33 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 12,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[0, 'a', 'b', 'hello', 'there', 'c', 4, 5, 6]\n"
+     ]
+    }
+   ],
    "source": [
     "# write your code here\n",
-    "\n"
+    "def insert_into(listname, index, iterable):\n",
+    "    listname[index:index] = iterable\n",
+    "\n",
+    "l = [0, 'a', 'b', 'c', 4, 5, 6]\n",
+    "i = ['hello', 'there']\n",
+    "insert_into(l, 3, i)\n",
+    "print(l)  \n"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 11,
    "metadata": {},
-   "outputs": [
-    {
-     "ename": "NameError",
-     "evalue": "name 'insert_into' is not defined",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
-      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
-      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[9]\u001b[39m\u001b[32m, line 4\u001b[39m\n\u001b[32m      1\u001b[39m \u001b[38;5;66;03m# do not modify. We will check this result for grading\u001b[39;00m\n\u001b[32m      2\u001b[39m l = [\u001b[32m0\u001b[39m,\u001b[33m'a'\u001b[39m,\u001b[33m'b'\u001b[39m,\u001b[33m'c'\u001b[39m,\u001b[32m4\u001b[39m,\u001b[32m5\u001b[39m,\u001b[32m6\u001b[39m]\n\u001b[32m      3\u001b[39m i = [\u001b[33m'hello'\u001b[39m, \u001b[33m'there'\u001b[39m]\n\u001b[32m----> \u001b[39m\u001b[32m4\u001b[39m insert_into(l, \u001b[32m3\u001b[39m, i)\n",
-      "\u001b[31mNameError\u001b[39m: name 'insert_into' is not defined"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "# do not modify. We will check this result for grading\n",
     "l = [0,'a','b','c',4,5,6]\n",
@@ -479,18 +687,31 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 13,
    "metadata": {},
    "outputs": [],
    "source": [
-    "# write your function here"
+    "# write your function here\n",
+    "def first_equals_last(listname):\n",
+    "    return len(listname) > 1 and listname[0] == listname[-1]"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 14,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "# do not modify. We will check this result for grading\n",
     "a = [1,2,3]\n",
@@ -499,9 +720,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 15,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "# do not modify. We will check this result for grading\n",
     "b = ['hello','goodbye','hello']\n",
@@ -510,9 +742,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 16,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "# do not modify. We will check this result for grading\n",
     "c  = [1,2,3,'1']\n",
@@ -521,19 +764,37 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 17,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "# do not modify. We will check this result for grading\n",
     "d = [[1,2],[3,2],[1,2]]\n",
     "first_equals_last(d)"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "26-spring-stats-21",
+   "display_name": "Python 3 (ipykernel)",
    "language": "python",
    "name": "python3"
   },
@@ -547,7 +808,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.12.13"
+   "version": "3.12.4"
   }
  },
  "nbformat": 4,
